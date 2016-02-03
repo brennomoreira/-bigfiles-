@@ -1,0 +1,241 @@
+```ruby
+require "/usr/local/lib/ruby/gems/2.2.0/gems/colored-1.2/lib/colored.rb"
+def start
+  `say "Yo! yo! brother yo!"`
+    puts "Dang! yo pizza delivery person! that smells good"
+    `say "Dang! yo pizza delivery person! that smells good" `
+    puts "What is your name?"
+    person = gets.chomp.capitalize
+    puts "Please come in #{person}"
+    `say "Please come in #{person}"`
+    puts "HA! Im Jigsaw! and you are in Saw 18 #{person}"
+    `say "Ha! Im Jigsaw! and you are in Saw 18 #{person}"`
+    puts "Lets play a deadly game! MUhuhuhaha!  "
+    `say "Lets play a deadly game! MUhuhuhaha!  "`
+    puts "I feel like squashing you with a giant box of asterisks!"
+    `say "I feel like squashing you with a giant box of asterisks!"`
+    puts "Well i'll give your life back depending on the results on the
+    following subjects: 'Height', 'Kardashians', 'Lil Jon' or 'Spiderman'!
+    Choose one!"
+    `say "Well i'll let you live depending on the results on the
+    following subjects: 'Height', 'Kardashians', 'Lil Jon' or 'Spiderman'!
+    Choose one!"`
+    option = gets.chomp.downcase
+    case option
+    when "height"
+      nex(option, person)
+    when "kardashians"
+      thunder(option, person, method(:death_pen))
+    when "lil jon"
+      boo(option, person, method(:death_pen))
+    when "spiderman"
+      hero(option, person, method(:death_pen))
+ #the method above called method calls a method inside
+  # other methods after using the .call method
+
+
+    end
+
+end
+
+def nex(option, person)
+    case option
+    when "height"
+      puts "Lets see your height bro!"
+      `say "Lets see your height bro!"`
+      option_1 = gets.chomp.to_i
+      if option_1 >= 6
+        puts "Your genetics is alright you may live #{person}"
+        `say "Your genetics is alright you may live #{person}"`
+      else
+        puts "you're in trouble little tiny person by the name of #{person}"
+        `say "you're in trouble little tiny person by the name of #{person}"`
+        death_pen(person)
+      end
+    end
+end
+
+    def height
+      height = 5
+      output = ""
+          height.times do |i|
+         output << "   " * height
+           output << "*************".red
+           output << "\n"
+          end
+          puts output
+    end
+
+
+  def death_pen(person)
+
+      sleep(4)
+          puts ""
+
+            height
+          puts " "
+          puts " "
+          puts ""
+          puts ""
+
+          puts "                   O>--<          "
+          puts ""
+          puts ""
+          sleep(1)
+
+
+            height
+
+          puts " "
+          puts " "
+          puts ""
+
+
+          puts "                   O>--<          "
+          puts ""
+          puts ""
+          puts ""
+          sleep(1)
+
+                  height
+
+          puts " "
+          puts " "
+
+
+          puts "                   O>--<          "
+          puts " "
+          puts ""
+          puts ""
+          puts ""
+          sleep(1)
+
+
+                    height
+
+          puts " "
+          puts "                   O>--<          "
+
+          puts " "
+          puts ""
+          puts ""
+          puts ""
+          sleep(1)
+
+
+                    height
+
+
+          puts "                   O>--<          "
+          puts " "
+          puts ""
+          puts ""
+          puts ""
+          sleep(1)
+
+          height
+
+
+    puts "                                     RIP #{person}"
+
+  # end
+end
+
+
+def thunder(option, person, x)
+      case option
+          when "kardashians"
+            puts "Who is Kanye's wife?"
+            `say "Who is Kanye's wife?"`
+            option_2 = gets.chomp.downcase
+            if option_2 == "kim"
+
+              puts "HA! You watch the kardashians! you deserve to be SQUASHED!"
+              `say  "HA! You watch the kardashians! you deserve to be SQUASHED!"`
+              sleep(5)
+
+              puts x.call(person)
+              puts "                             RIP #{person}"
+
+            else
+              puts " Well #{person} at least that means you dont watch junk!"
+            end
+      end
+end
+
+      #bla = death_pen
+#thunder(option, person, death_pen:(person))
+def boo(option, person, bi)
+      case option
+      when "lil jon"
+        puts "FROOOM THE WINDOW!"
+        `say "FROM THE WINDOW!"`
+       sleep(0.5)
+       puts "TO THE WALL!"
+       `say "TO THE WALL!"`
+      sleep(0.5)
+        puts " AH! THESE ------ CRAWLLLLL"
+        `say "AH! THESE BITCHES CRAWL"`
+        sleep(0.5)
+      puts "SKIT SKIT SKIT SKIT SKIT  MOTH%$%14&ERR"
+      `say "SKIT SKIT SKIT SKIT SKIT  MOTHERFUCKER"`
+      sleep(0.5)
+      puts "So What goes in the blank before crawl?"
+       option_4 = gets.chomp
+           if option_4 == "bitches"
+             sleep(1)
+             puts "Shame!! Lil Jon is the Devil!
+              If you know the words then you are dirty dirty and dirty dirty should
+              die die!"
+              `say "Shame!! Lil Jon is the Devil!
+               If you know the words then you are dirty dirty and dirty dirty should
+               die die!"`
+              sleep(1)
+               puts bi.call(person)
+              puts "                             RIP #{person}"
+
+            else
+              puts "Too bad! SKIT SKIT SKIT SKIT SQUAAAAAAASHHH"
+          `say "Too bad! SKIT SKIT SKIT SKIT SQUASHED!"`
+              sleep(1)
+            puts bi.call(person)
+              puts "                             RIP #{person}"
+
+
+          end
+      end
+    end
+
+def hero (option, person, peter)
+      case option
+      when "spiderman"
+        puts "Do you think im Spiderman?"
+        option_3 = gets.chomp
+              if option_3 == "yes"
+                puts "Yup! You already know it!"
+              elsif option_3 == "no"
+                    puts "think about it! Have you ever seen Spiderman and I
+                in the same place ? So how can you be so sure?
+                Yup torture time for you #{person}"
+                sleep(1)
+               peter.call(person)
+            puts "SQUAAAAAAAAAASHHHH"
+                puts "                           RIP #{person}"
+
+            end
+      end
+end
+
+
+
+
+
+start
+
+puts "Peace out!"
+#i tried to use downcase or downcase! in the cases chomp so despite if the
+#user uses capital letter or not it should work but neither would work
+#independent of the order
+#btw usually im more mature
+
+```
